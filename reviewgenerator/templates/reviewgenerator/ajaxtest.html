@@ -8,7 +8,8 @@
 <body>
     {% csrf_token %}
     <script src="{% static 'reviewgenerator/js/js_request.js' %}"></script>
-    <button onclick="updateContent()">Update Content</button>
-    <div id="content">Original content</div>
+    <label for="reviewInput">Please input your review: </label><input type="text" id="reviewInput">
+    <button onclick="updateContent()">submit</button>
+    <div id="content">output area</div>
 </body>
 </html>
