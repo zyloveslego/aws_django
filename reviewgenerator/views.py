@@ -35,7 +35,7 @@ def my_js_test(request):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "user", "content": "Please rewrite this customer review: " + input_review},
+            {"role": "user", "content": "Please rewrite this customer review with more details: " + input_review},
         ]
     )
 
