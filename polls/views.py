@@ -13,7 +13,7 @@ from django.views import generic
 # from django.template import loader
 # def index(request):
 #     latest_question_list = Question.objects.order_by('-pub_date')[:5]
-#     template = loader.get_template('polls/ajaxtest.html')
+#     template = loader.get_template('polls/jstest.html')
 #     context = {
 #         'latest_question_list': latest_question_list,
 #     }
@@ -22,7 +22,7 @@ from django.views import generic
 # def index(request):
 #     latest_question_list = Question.objects.order_by('-pub_date')[:5]
 #     context = {'latest_question_list': latest_question_list}
-#     return render(request, 'polls/ajaxtest.html', context)
+#     return render(request, 'polls/jstest.html', context)
 
 
 # use get_object_or_404 instead
