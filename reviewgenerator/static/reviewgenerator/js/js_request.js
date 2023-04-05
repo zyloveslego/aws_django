@@ -5,6 +5,7 @@
 // 3. 按钮的内容
 // 4. 分页的问题？ 要判断输入的餐馆还是物品还是商品描述
 // 5. 1-5星
+// 6. copy按钮
 
 function updateContent(){
     const xhr = new XMLHttpRequest();
@@ -86,4 +87,18 @@ function updateContent(){
     xhr.setRequestHeader('X-CSRFToken', csrftoken);
     xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
     xhr.send(JSON.stringify(jsonData));
+}
+
+function copyContent(){
+    // const copyButton = document.querySelector('#copyButton');
+    const myTextarea = document.querySelector('#content');
+
+    navigator.clipboard.writeText(myTextarea.innerText)
+            .then(() => {
+                console.log('Text copied to clipboard');
+                console.log(myTextarea.innerText);
+            })
+            .catch((err) => {
+                console.error('Error copying text: ', err);
+            });
 }

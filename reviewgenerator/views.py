@@ -2,6 +2,9 @@ import json
 
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.utils import timezone
+
+from .models import GptHistory
 
 from decouple import config
 
@@ -67,6 +70,19 @@ def my_js_test(request):
     # data = {
     #     'content': my_content
     # }
+
+    # insert into database
+    gpt_history = GptHistory(pub_date=timezone.now(),
+                             textarea_input=input_review,
+                             prompt_used="example",
+                             language_used=selected_language,
+                             pic_name=None,
+                             generated_gpt="example",
+                             star_rating=int(selected_rate),
+                             keywords=",".join(selected_keywords),
+                             )
+
+    gpt_history.save()
 
     data = {
         "inputReview":
