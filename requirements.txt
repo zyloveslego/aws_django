@@ -22,7 +22,6 @@ pandas==1.2.3
 pandas-stubs==1.2.0.62
 pip==22.3.1
 psycopg2==2.9.3
-pycparser==2.21
 pyOpenSSL==23.0.0
 PySocks==1.7.1
 python-dateutil==2.8.2
@@ -40,3 +39,4 @@ urllib3==1.26.14
 wheel==0.38.4
 whitenoise==6.4.0
 yarl==1.8.2
+pycparser==2.21
