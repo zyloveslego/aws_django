@@ -8,7 +8,7 @@
 <form action="{% url 'reviewgenerator:uploadpic' %}" method="POST" enctype="multipart/form-data">
 {% csrf_token %}
     <div class="updateImg">
-        <img src="media/{{ pic_name }}" alt=""/></div>
+        <img src="/media/{{ pic_name }}" alt=""/></div>
 
     <input name="pic" type="file" id="exampleInputFile">
     <button id="pic" class="btn btn-danger" type="submit">上传图片</button>

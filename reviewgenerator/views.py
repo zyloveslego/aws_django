@@ -220,7 +220,7 @@ def upload_pic(request):
 
         # 传入object detection
         print(pic_name)
-        # print(str(settings.MEDIA_ROOT))
+        print(str(settings.MEDIA_ROOT))
         object_detected = object_detect(str(settings.MEDIA_ROOT) + "/" + pic_name)
 
         context = {'pic_name': pic_name, 'object_detected': object_detected}
