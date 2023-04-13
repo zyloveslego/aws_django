@@ -34,3 +34,10 @@ class GptHistory(models.Model):
     application = models.CharField(max_length=20, choices=APPLICATION_CHOICE, default=1)
     # user
     # user_info = models.ForeignKey()
+
+
+# save pics
+class UploadPic(models.Model):
+    title = models.CharField(max_length=200, default='user1.jpg')
+    photo = models.ImageField(upload_to='', default='user1.jpg')
+
